@@ -29,6 +29,9 @@ public class PrintService {
 	@Value("${path.template}")
     private String templatePath;
 	
+	@Value("${cmd.wkhtmltopdf}")
+	private String wkhtmltopdfCmd;
+	
 	@PostConstruct  
     public void  init(){  
 		 FreemarkerUtil.init(templatePath);
@@ -50,7 +53,7 @@ public class PrintService {
 			// 添加二维码地址
 			root.put("qrcode", "data:image/gif;base64," + base64Image);
 			FreemarkerUtil.analysisTemplate("ticket.ftlh", tempPath + File.separator + orderId + ".html", root);
-			HTML2PDFUtil.convert(tempPath + File.separator + orderId + ".html", tempPath + File.separator + orderId + ".pdf");
+			HTML2PDFUtil.convert(wkhtmltopdfCmd, tempPath + File.separator + orderId + ".html", tempPath + File.separator + orderId + ".pdf");
 			PrinterFactory.printPDF(null, new FileInputStream(tempPath + File.separator + orderId + ".pdf"));
 		} catch (Exception e) {
 			e.printStackTrace();

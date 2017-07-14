@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
 	<head>
 		<style>
 		body {
-			font-family: 'Microsoft YaHei';
+			font-family: '微软雅黑';
 			margin:0;
 			padding:0;
 		}
