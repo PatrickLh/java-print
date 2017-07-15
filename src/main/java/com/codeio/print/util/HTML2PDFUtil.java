@@ -41,6 +41,7 @@ public class HTML2PDFUtil {
 		cmd.append(wkhtmltopdfCmd);
 		cmd.append(" -L 0"); // 设置左边距为0
 		cmd.append(" -T 0"); // 设置上边距为0
+//		cmd.append(" -encoding utf-8"); // 设置输入字符编码
 		cmd.append(" ");
 		cmd.append(inputFile);
 		cmd.append(" ");

@@ -1,7 +1,8 @@
 package com.codeio.print.util;
 
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Map;
 
@@ -54,7 +55,7 @@ public class FreemarkerUtil {
 		try {
 			// 获取模板
 			Template temp = cfg.getTemplate(templateName, "UTF-8");
-			out = new FileWriter(new File(fileName));
+			out = new OutputStreamWriter(new FileOutputStream(new File(fileName)),"UTF-8");
 			// 输出模板内容
 			temp.process(root, out);
 		} catch(Exception e){

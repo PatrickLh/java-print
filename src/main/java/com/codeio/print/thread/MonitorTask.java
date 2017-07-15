@@ -19,8 +19,8 @@ public class MonitorTask extends Thread {
     		System.out.println("线程:"+Thread.currentThread().getName()+"运行中.....");
 	    	printService.queryPrintOrder();
 	    	try {
-	    		// 每隔1min中进行一次扫描并打印
-	    		Thread.sleep(60000);
+	    		// 每隔10s中进行一次扫描并打印
+	    		Thread.sleep(10000);
 	    	}catch(Exception e) {
 	    		e.printStackTrace();
 	    	}
