@@ -1,7 +1,7 @@
 package com.codeio.print.model;
 
-public class MemberAddressDto {
-    private Integer id;
+public class OrderAddressDto {
+	private Integer id;
 
     private Integer memberId;
 

@@ -11,8 +11,8 @@ public class OrderDto {
     private Integer signalType;
 
     private Integer memberId;
-
-    private Integer memberAddressId;
+    
+    private Integer addressId;
 
     private Date signalStarttime;
 
@@ -86,12 +86,12 @@ public class OrderDto {
 		this.memberId = memberId;
 	}
 
-	public Integer getMemberAddressId() {
-		return memberAddressId;
+	public Integer getAddressId() {
+		return addressId;
 	}
 
-	public void setMemberAddressId(Integer memberAddressId) {
-		this.memberAddressId = memberAddressId;
+	public void setAddressId(Integer addressId) {
+		this.addressId = addressId;
 	}
 
 	public Date getSignalStarttime() {

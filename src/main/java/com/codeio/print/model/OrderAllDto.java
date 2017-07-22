@@ -8,7 +8,7 @@ public class OrderAllDto {
 
     private List<OrderProductDto> orderProductDtos;
     
-    private MemberAddressDto memberAddressDto;
+    private OrderAddressDto orderAddressDto;
 
     private String userOpenId;
     
@@ -34,12 +34,12 @@ public class OrderAllDto {
 		this.orderProductDtos = orderProductDtos;
 	}
 
-	public MemberAddressDto getMemberAddressDto() {
-		return memberAddressDto;
+	public OrderAddressDto getOrderAddressDto() {
+		return orderAddressDto;
 	}
 
-	public void setMemberAddressDto(MemberAddressDto memberAddressDto) {
-		this.memberAddressDto = memberAddressDto;
+	public void setOrderAddressDto(OrderAddressDto orderAddressDto) {
+		this.orderAddressDto = orderAddressDto;
 	}
 
 	public String getUserOpenId() {
