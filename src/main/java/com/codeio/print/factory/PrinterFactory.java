@@ -30,8 +30,9 @@ public class PrinterFactory {
 	 * 初始化获取打印服务对象
 	 */
 	public static void initial() {
-		// 获取所有打印机
+		// 设置打印机设置
 		aset = new HashPrintRequestAttributeSet();
+		// 查找打印机服务
 		services = PrintServiceLookup.lookupPrintServices(null, null);
 	}
 	
