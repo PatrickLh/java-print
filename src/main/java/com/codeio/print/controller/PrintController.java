@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.codeio.print.service.PrintService;
 
+/**
+ * 远程打印服务借口（暂未使用）
+ * @author patrick.liu
+ *
+ */
 @RestController
 @RequestMapping(path = "/print")
 public class PrintController {
@@ -19,7 +24,7 @@ public class PrintController {
     @RequestMapping(value="/order/{orderId}" , method = RequestMethod.GET)
     @ResponseBody
     public void print(@PathVariable Integer orderId) throws Exception{
-    	// 根据模板生成html文件
+    	// 调用服务的打印接口
     	printService.printTicket(orderId);
     }
 }

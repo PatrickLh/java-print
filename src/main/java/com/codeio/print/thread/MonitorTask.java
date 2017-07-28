@@ -6,6 +6,11 @@ import org.springframework.stereotype.Component;
 
 import com.codeio.print.service.PrintService;
 
+/**
+ * 独立的打印线程
+ * @author patrick.liu
+ *
+ */
 @Component("printTask")
 @Scope("prototype")
 public class MonitorTask extends Thread {
