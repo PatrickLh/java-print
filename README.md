@@ -13,7 +13,7 @@
 - > 
 生成HTML ： 利用Freemarker，将web端的html作为模板进行数据配置和填充 
 - >
-HTML转为PDF： 由于HTML页面不能通过打印机直接打印，而考虑到兼容问题，所以转为PDF最为合适，使用了第三方转换工具：wkhtmltopdf[url:https://wkhtmltopdf.org/]，这也是在使用过程中发现转换结果最好的工具了
+HTML转为PDF： 由于HTML页面不能通过打印机直接打印，而考虑到兼容问题，所以转为PDF最为合适，使用了第三方转换工具：[wkhtmltopdf](url:https://wkhtmltopdf.org/)，这也是在使用过程中发现转换结果最好的工具了
 - >
 使用JAVA获取PrintService服务打印PDF
 

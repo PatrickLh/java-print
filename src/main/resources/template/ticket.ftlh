@@ -135,7 +135,7 @@
 		      <div class="qrcode" style="text-align:left;float:left">
 		        <#if qrcode??><img src="${qrcode}"></img></#if>
 		      </div>
-		      <div class="price" style="width: 50%; text-align: right;float:right">
+		      <div class="price" style="width: 50%; text-align: left;float:right">
 		        <div>
 		        	<span>总金额：</span>
 		        	<#if order.orderDto?? && order.orderDto.totalPrice??>
@@ -144,8 +144,17 @@
 	        	</div>
 		        <div>
 		        	<span>优惠：</span>
-		        	<#if order.orderDto?? && order.orderDto.offer??>
+		        	<#--<#if order.orderDto?? && order.orderDto.offer??>
 		        		<span>￥ ${order.orderDto.offer}</span>
+		        	</#if>-->
+		        </div>
+		        <div>
+		        	<#if order.orderOfferDtos??>
+			        	<#list order.orderOfferDtos as offer>
+			        		<#if offer?? && offer.type == 1><span>买一送一 * ${offer.amount}</span></#if>
+			        		<#if offer?? && offer.type == 2><span>免费升杯 * ${offer.amount}</span></#if>
+			        		<#if offer?? && offer.type == 3><span>免费饮料 * ${offer.amount}</span></#if>
+			        	</#list>
 		        	</#if>
 		        </div>
 		        <div>

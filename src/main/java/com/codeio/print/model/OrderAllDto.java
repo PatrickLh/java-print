@@ -9,6 +9,8 @@ public class OrderAllDto {
     private List<OrderProductDto> orderProductDtos;
     
     private OrderAddressDto orderAddressDto;
+    
+    private List<OrderOfferDto> orderOfferDtos;
 
     private String userOpenId;
     
@@ -72,5 +74,13 @@ public class OrderAllDto {
 
 	public void setOfferIds(List<Integer> offerIds) {
 		this.offerIds = offerIds;
+	}
+
+	public List<OrderOfferDto> getOrderOfferDtos() {
+		return orderOfferDtos;
+	}
+
+	public void setOrderOfferDtos(List<OrderOfferDto> orderOfferDtos) {
+		this.orderOfferDtos = orderOfferDtos;
 	}
 }
