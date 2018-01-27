@@ -70,6 +70,12 @@
 			      		<span>${order.orderDto.orderNo}</span>
 			      	</#if>
 			      </div>
+				  <div>
+			      	<span>会员卡号：</span>
+			      	<#if order.orderDto?? && order.orderDto.cardNo??>
+			      		<span>${order.orderDto.cardNo}</span>
+			      	</#if>
+			      </div>
 			      <div>
 			      	<span>联系人：</span>
 		      		<#if order.orderAddressDto?? && order.orderAddressDto.consigneeName??>
